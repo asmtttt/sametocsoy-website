@@ -153,7 +153,7 @@ export default function Portfolio() {
                       className="p-6 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 cursor-pointer group block"
                     >
                       <h4 className="font-bold text-white mb-1 group-hover:text-emerald-400 transition-colors">Topkapı Üni. - Bilgisayar Mühendisliği (Lisans)</h4>
-                      <p className="text-slate-400 text-sm italic">3.46 GPA • 2018 - 2022 [cite: 12, 13]</p>
+                      <p className="text-slate-400 text-sm italic">3.46 GPA • 2018 - 2022</p>
                     </a>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export default function Portfolio() {
           <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out text-center py-10">
             <h2 className="text-4xl font-black mb-4 text-white tracking-tighter uppercase cursor-default">Bağlantıda Kalalım</h2>
             <p className="text-slate-400 mb-12 max-w-lg mx-auto italic cursor-default">
-              Yeni projeler veya sadece basketbol konuşmak için bana ulaşın. [cite: 91, 92]
+              Yeni projeler veya sadece basketbol konuşmak için bana ulaşın.
             </p>
             
             <div className="flex justify-center gap-8 md:gap-12">
