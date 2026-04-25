@@ -60,7 +60,6 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-[#030712] text-slate-200 selection:bg-blue-500/30 selection:text-blue-200 font-sans tracking-tight">
       
-      {/* Navigasyon Barı */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-500 border-b ${
         scrolled ? "bg-[#030712]/90 backdrop-blur-lg border-slate-800 py-4 shadow-2xl" : "bg-transparent border-transparent py-6"
       }`}>
@@ -78,7 +77,6 @@ export default function Portfolio() {
 
       <main className="max-w-5xl mx-auto px-6 pt-32 pb-20">
         
-        {/* HAKKIMDA BÖLÜMÜ */}
         {activeTab === "about" && (
           <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -123,18 +121,17 @@ export default function Portfolio() {
           </section>
         )}
 
-        {/* ÖZGEÇMİŞ BÖLÜMÜ */}
         {activeTab === "resume" && (
           <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
             <div className="grid md:grid-cols-3 gap-12">
               
-              {/* SOL KOLON: SADECE DENEYİM */}
               <div className="md:col-span-2 space-y-12">
                 <div>
                   <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 italic text-white cursor-default">
                     <Icons.Briefcase /> Deneyim
                   </h2>
-                  <div className="space-y-8 border-l-2 border-slate-800 ml-3 pl-8 relative">
+                  <div className="space-y-12 border-l-2 border-slate-800 ml-3 pl-8 relative">
+                    
                     <div className="relative group">
                       <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#030712] transition-transform duration-300 group-hover:scale-125"></div>
                       <h4 className="text-lg font-bold text-white cursor-default">Full Stack Developer</h4>
@@ -184,13 +181,50 @@ export default function Portfolio() {
                         </li>
                       </ul>
                     </div>
+
+                    <div className="relative group">
+                      <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#030712] transition-transform duration-300 group-hover:scale-125 group-hover:bg-blue-400"></div>
+                      <h4 className="text-lg font-bold text-white cursor-default">Avatar Chatbot Developer (Freelance)</h4>
+                      <div className="text-blue-400 text-sm mb-3 font-semibold tracking-wide cursor-default flex gap-2">
+                        <a href="https://www.linkedin.com/company/meta-trade-world-bilisim-a-s/?originalSubdomain=tr" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">Meta Trade World</a>
+                        <span>• 2022 - 2023</span>
+                      </div>
+                      <p className="text-slate-400 text-sm leading-relaxed cursor-default mb-2">
+                        4 farklı dilde çalışan, sektör odaklı yanıtlar veren web tabanlı sesli/yazılı Avatar Chatbot projesi.
+                      </p>
+                      <div className="flex flex-wrap gap-2 pt-1">
+                        {["Angular", "FastAPI", "Python", "TensorFlow", "NLTK"].map(tech => (
+                          <span key={tech} className="text-[10px] px-2 py-0.5 rounded-md bg-blue-500/5 border border-blue-500/10 text-blue-400/80 uppercase font-bold tracking-wider">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="relative group">
+                      <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#030712] transition-transform duration-300 group-hover:scale-125 group-hover:bg-blue-400"></div>
+                      <h4 className="text-lg font-bold text-white cursor-default">AI Developer (Freelance)</h4>
+                      <div className="text-blue-400 text-sm mb-3 font-semibold tracking-wide cursor-default flex gap-2">
+                        <a href="https://www.caretta.net/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">Caretta Yazılım</a>
+                        <span>• 2022</span>
+                      </div>
+                      <p className="text-slate-400 text-sm leading-relaxed cursor-default mb-2">
+                        Sektörel bağlama göre girdileri kategorize eden yapay zeka chatbotları geliştirilmesi.
+                      </p>
+                      <div className="flex flex-wrap gap-2 pt-1">
+                        {["Angular", "TypeScript", "FastAPI", "Python", "TensorFlow"].map(tech => (
+                          <span key={tech} className="text-[10px] px-2 py-0.5 rounded-md bg-blue-500/5 border border-blue-500/10 text-blue-400/80 uppercase font-bold tracking-wider">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
 
-              {/* SAĞ KOLON: EĞİTİM + YETENEKLER */}
               <div className="space-y-12">
-                {/* EĞİTİM BU KOLONA TAŞINDI */}
                 <div>
                   <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 italic text-white cursor-default">
                     <Icons.GraduationCap /> Eğitim
@@ -217,7 +251,6 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                {/* YETENEKLER ALTTA KALDI */}
                 <div>
                   <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 italic text-white cursor-default">
                     <Icons.Rocket /> Yetenekler
@@ -236,7 +269,6 @@ export default function Portfolio() {
           </section>
         )}
 
-        {/* İLETİŞİM BÖLÜMÜ */}
         {activeTab === "contact" && (
           <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out text-center py-10">
             <h2 className="text-4xl font-black mb-4 text-white tracking-tighter uppercase cursor-default">Bağlantıda Kalalım</h2>
@@ -275,7 +307,6 @@ export default function Portfolio() {
                 <span className="font-bold text-lg md:text-xl italic tracking-tight transition-all duration-300">
                   abdulsamet.ocsoy@gmail.com
                 </span>
-                {/* Sadece bu alan tıklanabilir ve cursor-pointer olacak */}
                 <div 
                   onClick={copyToClipboard}
                   className={`cursor-pointer p-2 rounded-lg transition-all duration-300 ${copied ? "text-emerald-400" : "text-slate-500 hover:text-white hover:bg-slate-800"}`}
@@ -289,7 +320,6 @@ export default function Portfolio() {
 
       </main>
 
-      {/* Arka Plan Dekoratif Işıklar */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full animate-pulse"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-emerald-900/10 blur-[120px] rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
