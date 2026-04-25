@@ -139,7 +139,7 @@ export default function Portfolio() {
                         <a href="https://www.araskargo.com.tr/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">Aras Kargo</a>
                         <span>-</span>
                         <a href="https://www.arasdx.com/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">ArasDx</a>
-                        <span>• 2022 - Günümüz</span>
+                        <span>• 2022 - Devam ediyor</span>
                       </div>
                       
                       <ul className="space-y-3 text-slate-400 text-sm leading-relaxed cursor-default">
@@ -237,7 +237,7 @@ export default function Portfolio() {
                       className="p-5 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group block"
                     >
                       <h4 className="font-bold text-white text-sm mb-1 group-hover:text-blue-400 transition-colors leading-tight">İTÜ - Bilgi Güvenliği Mühendisliği (YL)</h4>
-                      <p className="text-slate-400 text-xs italic">2024 - Günümüz</p>
+                      <p className="text-slate-400 text-xs italic">2024 - Devam ediyor</p>
                     </a>
                     <a 
                       href="https://www.topkapi.edu.tr/tr-TR/ana-sayfa/48193" 
