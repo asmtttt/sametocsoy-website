@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 
 const Icons = {
-  // ... diğer ikonların (Github, Linkedin, Instagram, Youtube vb.) olduğu kısım aynı kalacak
   Github: () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
   ),
@@ -19,7 +18,6 @@ const Icons = {
   Mail: () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
   ),
-  // Yeni Kopyalama İkonları
   Copy: () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
   ),
@@ -129,6 +127,8 @@ export default function Portfolio() {
         {activeTab === "resume" && (
           <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
             <div className="grid md:grid-cols-3 gap-12">
+              
+              {/* SOL KOLON: SADECE DENEYİM */}
               <div className="md:col-span-2 space-y-12">
                 <div>
                   <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 italic text-white cursor-default">
@@ -138,20 +138,59 @@ export default function Portfolio() {
                     <div className="relative group">
                       <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#030712] transition-transform duration-300 group-hover:scale-125"></div>
                       <h4 className="text-lg font-bold text-white cursor-default">Full Stack Developer</h4>
-                      <div className="text-blue-400 text-sm mb-2 font-semibold tracking-wide flex gap-2 cursor-default">
+                      <div className="text-blue-400 text-sm mb-4 font-semibold tracking-wide flex gap-2 cursor-default">
                         <a href="https://www.araskargo.com.tr/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">Aras Kargo</a>
                         <span>-</span>
                         <a href="https://www.arasdx.com/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">ArasDx</a>
                         <span>• 2022 - Günümüz</span>
                       </div>
-                      <p className="text-slate-400 text-sm leading-relaxed cursor-default">
-                        FastAPI ve MongoDB mimarileri ile biletleme/dashboard sistemleri geliştirme. 
-                        Locker ve Harita tabanlı mikroservis uygulamaları (C#, Redis, Kafka, Docker).
-                      </p>
+                      
+                      <ul className="space-y-3 text-slate-400 text-sm leading-relaxed cursor-default">
+                        <li className="flex items-start gap-3">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                          <span><strong className="text-slate-200">Ticket & Dashboard:</strong> Operasyon, çalışan ve görev takibi için Angular 16, MongoDB ve FastAPI kullanarak geliştirilen sistem.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                          <span><strong className="text-slate-200">Kurye Dolap Uygulaması:</strong> Kurye operasyonlarını hızlandıran, Ionic ve Cordova ile yazılmış mobil çözüm.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                          <span><strong className="text-slate-200">Eurodis Cargonet Entegrasyonu:</strong> MIP, TIF, CIF gibi eski veri formatlarını .NET, C# ve LINQ ile modern altyapıya taşıma.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                          <span><strong className="text-slate-200">Harita & Mikroservis:</strong> Leaflet.js, Docker, Kafka, Redis ve Graylog ile kapsayıcı mimaride geliştirilen harita tabanlı uygulamalar.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                          <span><strong className="text-slate-200">Coğrafi Veri Araçları:</strong> Leaflet.js, MongoDB ve C# kullanılarak poligon çizim ve lokasyon belirleme sistemleri.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                          <span><strong className="text-slate-200">Bildirim & SMS Sistemi:</strong> Postman ile test edilen, C# mikroservis tabanlı gerçek zamanlı bildirim altyapısı.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                          <span><strong className="text-slate-200">Görev Yönetim Paneli:</strong> Çalışan performansı takibi için LINQ sorgularıyla oluşturulan raporlama sistemleri.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                          <span><strong className="text-slate-200">ETL Süreçleri:</strong> Airflow ve Python ile MongoDB'den PostgreSQL'e veri aktarımı ve Metabase raporlamaları.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                          <span><strong className="text-slate-200">Metin Madenciliği & NLP:</strong> Python, TensorFlow, scikit-learn ve spaCy ile metin sınıflandırma, veri kazıma ve chatbot sistemleri.</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+              </div>
 
+              {/* SAĞ KOLON: EĞİTİM + YETENEKLER */}
+              <div className="space-y-12">
+                {/* EĞİTİM BU KOLONA TAŞINDI */}
                 <div>
                   <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 italic text-white cursor-default">
                     <Icons.GraduationCap /> Eğitim
@@ -161,36 +200,38 @@ export default function Portfolio() {
                       href="https://be.itu.edu.tr/hakkimizda/enstitu-hakkinda/bilgi-guvenligi-muhendisligi-ve-kriptografi-programi-lisansustu-dersleri" 
                       target="_blank" 
                       rel="noreferrer"
-                      className="p-6 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group block"
+                      className="p-5 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group block"
                     >
-                      <h4 className="font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">İTÜ - Bilgi Güvenliği Mühendisliği (Yüksek Lisans)</h4>
-                      <p className="text-slate-400 text-sm italic">2024 - Günümüz</p>
+                      <h4 className="font-bold text-white text-sm mb-1 group-hover:text-blue-400 transition-colors leading-tight">İTÜ - Bilgi Güvenliği Mühendisliği (YL)</h4>
+                      <p className="text-slate-400 text-xs italic">2024 - Günümüz</p>
                     </a>
                     <a 
                       href="https://www.topkapi.edu.tr/tr-TR/ana-sayfa/48193" 
                       target="_blank" 
                       rel="noreferrer"
-                      className="p-6 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 cursor-pointer group block"
+                      className="p-5 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 cursor-pointer group block"
                     >
-                      <h4 className="font-bold text-white mb-1 group-hover:text-emerald-400 transition-colors">Topkapı Üni. - Bilgisayar Mühendisliği (Lisans)</h4>
-                      <p className="text-slate-400 text-sm italic">3.46 GPA • 2018 - 2022</p>
+                      <h4 className="font-bold text-white text-sm mb-1 group-hover:text-emerald-400 transition-colors leading-tight">Topkapı Üni. - Bilgisayar Müh. (Lisans)</h4>
+                      <p className="text-slate-400 text-xs italic">3.46 GPA • 2018 - 2022</p>
                     </a>
+                  </div>
+                </div>
+
+                {/* YETENEKLER ALTTA KALDI */}
+                <div>
+                  <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 italic text-white cursor-default">
+                    <Icons.Rocket /> Yetenekler
+                  </h2>
+                  <div className="flex flex-wrap gap-2">
+                    {["Angular", "React", ".NET CORE", "Python", "FastAPI", "NLP", "TensorFlow", "MongoDB", "PostgreSQL", "Docker", "Leaflet.js", "Redis", "Kafka"].map((skill) => (
+                      <span key={skill} className="px-4 py-2 rounded-xl bg-slate-900/80 border border-slate-800 text-sm hover:border-blue-500/50 hover:text-white transition-all duration-300 cursor-pointer text-slate-300 font-medium">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-8">
-                <h2 className="text-2xl font-bold flex items-center gap-3 italic text-white cursor-default">
-                  <Icons.Rocket /> Yetenekler
-                </h2>
-                <div className="flex flex-wrap gap-2">
-                  {["Angular", "React", ".NET CORE", "Python", "FastAPI", "NLP", "TensorFlow", "MongoDB", "PostgreSQL", "Docker", "Leaflet.js", "Redis", "Kafka"].map((skill) => (
-                    <span key={skill} className="px-4 py-2 rounded-xl bg-slate-900/80 border border-slate-800 text-sm hover:border-blue-500/50 hover:text-white transition-all duration-300 cursor-pointer text-slate-300 font-medium">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
           </section>
         )}
@@ -227,18 +268,21 @@ export default function Portfolio() {
             </div>
 
             <div className="mt-20 flex justify-center items-center">
-               <div 
+              <div 
+                className="inline-flex items-center gap-3 text-slate-400 hover:text-blue-400 transition-all duration-300 group bg-slate-900/50 px-6 py-3 rounded-2xl border border-slate-800 hover:border-blue-500/30"
+              >
+                <Icons.Mail />
+                <span className="font-bold text-lg md:text-xl italic tracking-tight transition-all duration-300">
+                  abdulsamet.ocsoy@gmail.com
+                </span>
+                {/* Sadece bu alan tıklanabilir ve cursor-pointer olacak */}
+                <div 
                   onClick={copyToClipboard}
-                  className="cursor-pointer inline-flex items-center gap-3 text-slate-400 hover:text-blue-400 transition-all duration-300 group active:scale-95 bg-slate-900/50 px-6 py-3 rounded-2xl border border-slate-800 hover:border-blue-500/30"
-               >
-                  <Icons.Mail />
-                  <span className="font-bold text-lg md:text-xl italic tracking-tight group-hover:tracking-wider transition-all duration-300">
-                    abdulsamet.ocsoy@gmail.com
-                  </span>
-                  <div className={`transition-all duration-300 ${copied ? "text-emerald-400" : "text-slate-500"}`}>
-                    {copied ? <Icons.Check /> : <Icons.Copy />}
-                  </div>
-               </div>
+                  className={`cursor-pointer p-2 rounded-lg transition-all duration-300 ${copied ? "text-emerald-400" : "text-slate-500 hover:text-white hover:bg-slate-800"}`}
+                >
+                  {copied ? <Icons.Check /> : <Icons.Copy />}
+                </div>
+              </div>
             </div>
           </section>
         )}
