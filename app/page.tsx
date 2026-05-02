@@ -1,14 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/layout/Navbar";
 import AboutSection from "@/components/sections/AboutSection";
 import ResumeSection from "@/components/sections/ResumeSection";
 import ContactSection from "@/components/sections/ContactSection";
 import BackgroundBlur from "@/components/ui/BackgroundBlur";
 
-export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState("about");
+function PortfolioContent() {
+  const searchParams = useSearchParams();
+  const initialTab = searchParams.get("tab") ?? "about";
+  const [activeTab, setActiveTab] = useState(initialTab);
 
   return (
     <div className="min-h-screen bg-[#030712] text-slate-200 selection:bg-blue-500/30 selection:text-blue-200 font-sans tracking-tight">
@@ -24,5 +27,13 @@ export default function Portfolio() {
 
       <BackgroundBlur />
     </div>
+  );
+}
+
+export default function Portfolio() {
+  return (
+    <Suspense>
+      <PortfolioContent />
+    </Suspense>
   );
 }

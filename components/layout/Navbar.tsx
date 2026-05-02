@@ -42,7 +42,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
   const handleHomeTab = (key: string) => {
     setMenuOpen(false);
     if (isOnProjects) {
-      router.push("/");
+      router.push(`/?tab=${key}`);
     } else {
       setActiveTab?.(key);
     }
