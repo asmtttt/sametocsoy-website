@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import AboutSection from "@/components/sections/AboutSection";
 import ResumeSection from "@/components/sections/ResumeSection";
@@ -9,17 +9,10 @@ import BackgroundBlur from "@/components/ui/BackgroundBlur";
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("about");
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div className="min-h-screen bg-[#030712] text-slate-200 selection:bg-blue-500/30 selection:text-blue-200 font-sans tracking-tight">
-      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} scrolled={scrolled} />
+      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       <main className="max-w-5xl mx-auto px-6 pt-32 pb-20">
         {activeTab === "about" && (
