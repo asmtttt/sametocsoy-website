@@ -1,47 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-
-const Icons = {
-  Github: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-  ),
-  Linkedin: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-  ),
-  Instagram: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-  ),
-  Youtube: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-  ),
-  Mail: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-  ),
-  Copy: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-  ),
-  Check: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-  ),
-  Download: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-  ),
-  Briefcase: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-  ),
-  GraduationCap: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-  ),
-  Rocket: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-5c1.62-2.2 5-3 5-3l1 1"/><path d="M12 15v5s3.03-.55 5-2c2.2-1.62 3-5 3-5l-1-1"/></svg>
-  )
-};
+import { useState, useEffect } from "react";
+import Navbar from "@/components/layout/Navbar";
+import AboutSection from "@/components/sections/AboutSection";
+import ResumeSection from "@/components/sections/ResumeSection";
+import ContactSection from "@/components/sections/ContactSection";
+import BackgroundBlur from "@/components/ui/BackgroundBlur";
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("about");
   const [scrolled, setScrolled] = useState(false);
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -49,288 +17,19 @@ export default function Portfolio() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const copyToClipboard = () => {
-    const email = "abdulsamet.ocsoy@gmail.com";
-    navigator.clipboard.writeText(email).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  };
-
   return (
     <div className="min-h-screen bg-[#030712] text-slate-200 selection:bg-blue-500/30 selection:text-blue-200 font-sans tracking-tight">
-      
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 border-b ${
-        scrolled ? "bg-[#030712]/90 backdrop-blur-lg border-slate-800 py-4 shadow-2xl" : "bg-transparent border-transparent py-6"
-      }`}>
-        <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
-          <span className="text-xl font-bold tracking-tighter bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent cursor-pointer">
-            Samet Öçsoy
-          </span>
-          <div className="flex gap-6 md:gap-8 text-sm font-medium">
-            <button onClick={() => setActiveTab("about")} className={`cursor-pointer transition-all duration-300 ${activeTab === "about" ? "text-blue-400 scale-105" : "text-slate-400 hover:text-blue-300"}`}>Hakkımda</button>
-            <button onClick={() => setActiveTab("resume")} className={`cursor-pointer transition-all duration-300 ${activeTab === "resume" ? "text-blue-400 scale-105" : "text-slate-400 hover:text-blue-300"}`}>Özgeçmiş</button>
-            <button onClick={() => setActiveTab("contact")} className={`cursor-pointer transition-all duration-300 ${activeTab === "contact" ? "text-blue-400 scale-105" : "text-slate-400 hover:text-blue-300"}`}>İletişim</button>
-          </div>
-        </div>
-      </nav>
+      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} scrolled={scrolled} />
 
       <main className="max-w-5xl mx-auto px-6 pt-32 pb-20">
-        
         {activeTab === "about" && (
-          <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-6 tracking-widest uppercase cursor-default">
-                  Software Engineer
-                </div>
-                <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tight text-white leading-[1.1] cursor-default">
-                  Geleceği <span className="text-blue-500">Kodla</span> Şekillendir.
-                </h1>
-                <p className="text-lg text-slate-400 leading-relaxed mb-6 cursor-default">
-                  Teknolojinin sınırlarını zorlamayı seven bir mühendis olarak; 
-                  <span className="text-slate-200 font-semibold"> Yapay Zeka (AI), Doğal Dil İşleme (NLP)</span> ve akıllı chatbot sistemleri üzerine uzmanlaşıyorum. 
-                  Veriyi <span className="text-blue-400 font-semibold italic">Haritalama API'ları (Leaflet.js)</span> ile görselleştirerek kullanıcı deneyimini bir üst seviyeye taşımak benim tutkum.
-                </p>
-                <div className="flex items-center gap-4 text-slate-500 italic border-l-2 border-slate-800 pl-4 mb-8 cursor-default font-medium">
-                  "Sahadaki stratejiyi koda, kodun hızını hayata yansıtıyorum."
-                </div>
-                <div className="flex gap-4">
-                  <button 
-                    onClick={() => setActiveTab('resume')} 
-                    className="cursor-pointer bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-bold transition-all duration-300 shadow-lg shadow-blue-600/20 active:scale-95"
-                  >
-                    Detayları Gör
-                  </button>
-                  <a 
-                    href="/resume.pdf" 
-                    download="Samet_Ocsoy_CV.pdf"
-                    className="cursor-pointer flex items-center gap-2 border border-slate-700 hover:border-slate-500 px-8 py-3 rounded-full font-bold transition-all duration-300 active:scale-95 text-slate-200"
-                  >
-                    <Icons.Download /> CV İndir
-                  </a>
-                </div>
-              </div>
-              <div className="relative flex justify-center">
-                <div className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full"></div>
-                <div className="relative w-72 h-72 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/50 shadow-2xl flex items-center justify-center text-8xl grayscale hover:grayscale-0 transition-all duration-700 ease-in-out transform hover:scale-105 cursor-pointer">
-                  🚀
-                </div>
-              </div>
-            </div>
-          </section>
+          <AboutSection onViewDetails={() => setActiveTab("resume")} />
         )}
-
-        {activeTab === "resume" && (
-          <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
-            <div className="grid md:grid-cols-3 gap-12">
-              
-              <div className="md:col-span-2 space-y-12">
-                <div>
-                  <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 italic text-white cursor-default">
-                    <Icons.Briefcase /> Deneyim
-                  </h2>
-                  <div className="space-y-12 border-l-2 border-slate-800 ml-3 pl-8 relative">
-                    
-                    <div className="relative group">
-                      <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#030712] transition-transform duration-300 group-hover:scale-125"></div>
-                      <h4 className="text-lg font-bold text-white cursor-default">Full Stack Developer</h4>
-                      <div className="text-blue-400 text-sm mb-4 font-semibold tracking-wide flex gap-2 cursor-default">
-                        <a href="https://www.araskargo.com.tr/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">Aras Kargo</a>
-                        <span>-</span>
-                        <a href="https://www.arasdx.com/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">ArasDx</a>
-                        <span>• 2022 - Devam ediyor</span>
-                      </div>
-                      
-                      <ul className="space-y-3 text-slate-400 text-sm leading-relaxed cursor-default">
-                        <li className="flex items-start gap-3">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">Ticket & Dashboard:</strong> Operasyon, çalışan ve görev takibi için Angular 16, MongoDB ve FastAPI kullanarak geliştirilen sistem.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">Kurye Dolap Uygulaması:</strong> Kurye operasyonlarını hızlandıran, Ionic ve Cordova ile yazılmış mobil çözüm.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">Eurodis Cargonet Entegrasyonu:</strong> MIP, TIF, CIF gibi eski veri formatlarını .NET, C# ve LINQ ile modern altyapıya taşıma.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">Harita & Mikroservis:</strong> Leaflet.js, Docker, Kafka, Redis ve Graylog ile kapsayıcı mimaride geliştirilen harita tabanlı uygulamalar.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">Coğrafi Veri Araçları:</strong> Leaflet.js, MongoDB and C# kullanılarak poligon çizim ve lokasyon belirleme sistemleri.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">Bildirim & SMS Sistemi:</strong> Postman ile test edilen, C# mikroservis tabanlı gerçek zamanlı bildirim altyapısı.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">Görev Yönetim Paneli:</strong> Çalışan performansı takibi için LINQ sorgularıyla oluşturulan raporlama sistemleri.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">ETL Süreçleri:</strong> Airflow ve Python ile MongoDB'den PostgreSQL'e veri aktarımı ve Metabase raporlamaları.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">Metin Madenciliği & NLP:</strong> Python, TensorFlow, scikit-learn ve spaCy ile metin sınıflandırma, veri kazıma ve chatbot sistemleri.</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="relative group">
-                      <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#030712] transition-transform duration-300 group-hover:scale-125 group-hover:bg-blue-400"></div>
-                      <h4 className="text-lg font-bold text-white cursor-default">Avatar Chatbot Developer (Freelance)</h4>
-                      <div className="text-blue-400 text-sm mb-3 font-semibold tracking-wide cursor-default flex gap-2">
-                        <a href="https://www.linkedin.com/company/meta-trade-world-bilisim-a-s/?originalSubdomain=tr" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">Meta Trade World</a>
-                        <span>• 2022 - 2023</span>
-                      </div>
-                      <p className="text-slate-400 text-sm leading-relaxed cursor-default mb-2">
-                        4 farklı dilde çalışan, sektör odaklı yanıtlar veren web tabanlı sesli/yazılı Avatar Chatbot projesi.
-                      </p>
-                      <div className="flex flex-wrap gap-2 pt-1">
-                        {["Angular", "FastAPI", "Python", "TensorFlow", "NLTK"].map(tech => (
-                          <span key={tech} className="text-[10px] px-2 py-0.5 rounded-md bg-blue-500/5 border border-blue-500/10 text-blue-400/80 uppercase font-bold tracking-wider">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="relative group">
-                      <div className="absolute -left-[39px] top-1 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#030712] transition-transform duration-300 group-hover:scale-125 group-hover:bg-blue-400"></div>
-                      <h4 className="text-lg font-bold text-white cursor-default">AI Developer (Freelance)</h4>
-                      <div className="text-blue-400 text-sm mb-3 font-semibold tracking-wide cursor-default flex gap-2">
-                        <a href="https://www.caretta.net/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">Caretta Yazılım</a>
-                        <span>• 2022</span>
-                      </div>
-                      <p className="text-slate-400 text-sm leading-relaxed cursor-default mb-2">
-                        Sektörel bağlama göre girdileri kategorize eden yapay zeka chatbotları geliştirilmesi.
-                      </p>
-                      <div className="flex flex-wrap gap-2 pt-1">
-                        {["Angular", "TypeScript", "FastAPI", "Python", "TensorFlow"].map(tech => (
-                          <span key={tech} className="text-[10px] px-2 py-0.5 rounded-md bg-blue-500/5 border border-blue-500/10 text-blue-400/80 uppercase font-bold tracking-wider">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-12">
-                <div>
-                  <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 italic text-white cursor-default">
-                    <Icons.GraduationCap /> Eğitim
-                  </h2>
-                  <div className="grid gap-4">
-                    <a 
-                      href="https://be.itu.edu.tr/hakkimizda/enstitu-hakkinda/bilgi-guvenligi-muhendisligi-ve-kriptografi-programi-lisansustu-dersleri" 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="p-5 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group block"
-                    >
-                      <div className="flex flex-col gap-1">
-                        <span className="font-black text-blue-400 text-[10px] tracking-widest uppercase">İstanbul Teknik Üniversitesi</span>
-                        <span className="font-bold text-white text-base leading-tight group-hover:text-blue-300 transition-colors">Bilgi Güvenliği Mühendisliği ve Kriptografi</span>
-                        <span className="text-slate-400 text-xs italic font-medium">Tezli Yüksek Lisans • 2024 - Devam ediyor</span>
-                      </div>
-                    </a>
-                    
-                    <a 
-                      href="https://www.topkapi.edu.tr/tr-TR/ana-sayfa/48193" 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="p-5 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 cursor-pointer group block"
-                    >
-                      <div className="flex flex-col gap-1">
-                        <span className="font-black text-emerald-400 text-[10px] tracking-widest uppercase">Topkapı Üniversitesi</span>
-                        <span className="font-bold text-white text-base leading-tight group-hover:text-emerald-300 transition-colors">Bilgisayar Mühendisliği</span>
-                        <span className="text-slate-400 text-xs italic font-medium">Lisans • 3.46 GPA • 2018 - 2022</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 italic text-white cursor-default">
-                    <Icons.Rocket /> Yetenekler
-                  </h2>
-                  <div className="flex flex-wrap gap-2">
-                    {["Angular", "React", ".NET CORE", "Python", "FastAPI", "NLP", "TensorFlow", "MongoDB", "PostgreSQL", "Docker", "Leaflet.js", "Redis", "Kafka"].map((skill) => (
-                      <span key={skill} className="px-4 py-2 rounded-xl bg-slate-900/80 border border-slate-800 text-sm hover:border-blue-500/50 hover:text-white transition-all duration-300 cursor-pointer text-slate-300 font-medium">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </section>
-        )}
-
-        {activeTab === "contact" && (
-          <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out text-center py-10">
-            <h2 className="text-4xl font-black mb-4 text-white tracking-tighter uppercase cursor-default">Bağlantıda Kalalım</h2>
-            <p className="text-slate-400 mb-12 max-w-lg mx-auto italic cursor-default">
-              Yeni projeler veya sadece basketbol konuşmak için bana ulaşın.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-              <a href="https://www.instagram.com/samet.ocsy/" target="_blank" rel="noreferrer" className="cursor-pointer group p-6 rounded-full bg-slate-900 border border-slate-800 hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_40px_rgba(225,48,108,0.2)]">
-                <div className="text-slate-400 group-hover:text-pink-500 transition-colors duration-300">
-                  <Icons.Instagram />
-                </div>
-              </a>
-              <a href="https://www.linkedin.com/in/sametocsoy/" target="_blank" rel="noreferrer" className="cursor-pointer group p-6 rounded-full bg-slate-900 border border-slate-800 hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,119,181,0.2)]">
-                <div className="text-slate-400 group-hover:text-blue-500 transition-colors duration-300">
-                  <Icons.Linkedin />
-                </div>
-              </a>
-              <a href="https://github.com/asmtttt" target="_blank" rel="noreferrer" className="cursor-pointer group p-6 rounded-full bg-slate-900 border border-slate-800 hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.1)]">
-                <div className="text-slate-400 group-hover:text-white transition-colors duration-300">
-                  <Icons.Github />
-                </div>
-              </a>
-              <a href="https://www.youtube.com/@sametocsy" target="_blank" rel="noreferrer" className="cursor-pointer group p-6 rounded-full bg-slate-900 border border-slate-800 hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,0,0,0.2)]">
-                <div className="text-slate-400 group-hover:text-red-500 transition-colors duration-300">
-                  <Icons.Youtube />
-                </div>
-              </a>
-            </div>
-
-            <div className="mt-20 flex justify-center items-center">
-              <div 
-                className="inline-flex items-center gap-3 text-slate-400 hover:text-blue-400 transition-all duration-300 group bg-slate-900/50 px-6 py-3 rounded-2xl border border-slate-800 hover:border-blue-500/30"
-              >
-                <Icons.Mail />
-                <span className="font-bold text-lg md:text-xl italic tracking-tight transition-all duration-300">
-                  abdulsamet.ocsoy@gmail.com
-                </span>
-                <div 
-                  onClick={copyToClipboard}
-                  className={`cursor-pointer p-2 rounded-lg transition-all duration-300 ${copied ? "text-emerald-400" : "text-slate-500 hover:text-white hover:bg-slate-800"}`}
-                >
-                  {copied ? <Icons.Check /> : <Icons.Copy />}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-
+        {activeTab === "resume" && <ResumeSection />}
+        {activeTab === "contact" && <ContactSection />}
       </main>
 
-      <div className="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full animate-pulse"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-emerald-900/10 blur-[120px] rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
+      <BackgroundBlur />
     </div>
   );
 }
