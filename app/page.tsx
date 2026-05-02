@@ -161,7 +161,7 @@ export default function Portfolio() {
                         </li>
                         <li className="flex items-start gap-3">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
-                          <span><strong className="text-slate-200">Coğrafi Veri Araçları:</strong> Leaflet.js, MongoDB ve C# kullanılarak poligon çizim ve lokasyon belirleme sistemleri.</span>
+                          <span><strong className="text-slate-200">Coğrafi Veri Araçları:</strong> Leaflet.js, MongoDB and C# kullanılarak poligon çizim ve lokasyon belirleme sistemleri.</span>
                         </li>
                         <li className="flex items-start gap-3">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
@@ -236,17 +236,24 @@ export default function Portfolio() {
                       rel="noreferrer"
                       className="p-5 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group block"
                     >
-                      <h4 className="font-bold text-white text-sm mb-1 group-hover:text-blue-400 transition-colors leading-tight">İTÜ - Bilgi Güvenliği Mühendisliği (YL)</h4>
-                      <p className="text-slate-400 text-xs italic">2024 - Devam ediyor</p>
+                      <div className="flex flex-col gap-1">
+                        <span className="font-black text-blue-400 text-[10px] tracking-widest uppercase">İstanbul Teknik Üniversitesi</span>
+                        <span className="font-bold text-white text-base leading-tight group-hover:text-blue-300 transition-colors">Bilgi Güvenliği Mühendisliği ve Kriptografi</span>
+                        <span className="text-slate-400 text-xs italic font-medium">Tezli Yüksek Lisans • 2024 - Devam ediyor</span>
+                      </div>
                     </a>
+                    
                     <a 
                       href="https://www.topkapi.edu.tr/tr-TR/ana-sayfa/48193" 
                       target="_blank" 
                       rel="noreferrer"
                       className="p-5 rounded-2xl bg-slate-900/30 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 cursor-pointer group block"
                     >
-                      <h4 className="font-bold text-white text-sm mb-1 group-hover:text-emerald-400 transition-colors leading-tight">Topkapı Üni. - Bilgisayar Müh. (Lisans)</h4>
-                      <p className="text-slate-400 text-xs italic">3.46 GPA • 2018 - 2022</p>
+                      <div className="flex flex-col gap-1">
+                        <span className="font-black text-emerald-400 text-[10px] tracking-widest uppercase">Topkapı Üniversitesi</span>
+                        <span className="font-bold text-white text-base leading-tight group-hover:text-emerald-300 transition-colors">Bilgisayar Mühendisliği</span>
+                        <span className="text-slate-400 text-xs italic font-medium">Lisans • 3.46 GPA • 2018 - 2022</span>
+                      </div>
                     </a>
                   </div>
                 </div>
