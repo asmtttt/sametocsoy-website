@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "about": "About",
+    "resume": "Resume",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "hero": {
+    "badge": "Software Engineer",
+    "headlineStart": "Shape the",
+    "headlineAccent": "Future",
+    "headlineEnd": "with Code.",
+    "descPrefix": "As an engineer who loves pushing the boundaries of technology;",
+    "descAI": "Artificial Intelligence (AI), Natural Language Processing (NLP)",
+    "descMid": "and intelligent chatbot systems are my specialty. Visualizing data with",
+    "descMap": "Mapping APIs (Leaflet.js)",
+    "descSuffix": "to take the user experience to the next level is my passion.",
+    "quote": "I turn field strategy into code, and code's speed into life.",
+    "cta": "See Details",
+    "downloadCV": "Download CV"
+  },
+  "resume": {
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "jobs": [
+      {
+        "key": "fullstack",
+        "title": "Full Stack Developer",
+        "period": "2022 - Present",
+        "bullets": [
+          { "title": "Ticket & Dashboard", "text": "A system built with Angular 16, MongoDB and FastAPI for tracking operations, employees and tasks." },
+          { "title": "Courier Locker App", "text": "A mobile solution written with Ionic and Cordova to speed up courier operations." },
+          { "title": "Eurodis Cargonet Integration", "text": "Migrating legacy data formats like MIP, TIF and CIF to modern infrastructure with .NET, C# and LINQ." },
+          { "title": "Maps & Microservices", "text": "Map-based applications in containerized architecture using Leaflet.js, Docker, Kafka, Redis and Graylog." },
+          { "title": "Geospatial Data Tools", "text": "Polygon drawing and location systems built with Leaflet.js, MongoDB and C#." },
+          { "title": "Notification & SMS System", "text": "Real-time notification infrastructure based on C# microservices, tested with Postman." },
+          { "title": "Task Management Panel", "text": "Reporting systems built with LINQ queries for tracking employee performance." },
+          { "title": "ETL Processes", "text": "Data migration from MongoDB to PostgreSQL with Airflow and Python, plus Metabase reporting." },
+          { "title": "Text Mining & NLP", "text": "Text classification, data scraping and chatbot systems with Python, TensorFlow, scikit-learn and spaCy." }
+        ],
+        "description": ""
+      },
+      {
+        "key": "chatbot",
+        "title": "Avatar Chatbot Developer (Freelance)",
+        "period": "2022 - 2023",
+        "bullets": [],
+        "description": "A web-based voice and text Avatar Chatbot that works in 4 languages and delivers industry-focused answers."
+      },
+      {
+        "key": "ai",
+        "title": "AI Developer (Freelance)",
+        "period": "2022",
+        "bullets": [],
+        "description": "Development of AI chatbots that categorize user inputs based on sectoral context."
+      }
+    ],
+    "schools": [
+      {
+        "key": "itu",
+        "name": "Istanbul Technical University",
+        "degree": "Security Engineering & Cryptography",
+        "detail": "MSc (Thesis) • 2024 - Present"
+      },
+      {
+        "key": "topkapi",
+        "name": "Topkapı University",
+        "degree": "Computer Engineering",
+        "detail": "BSc • 3.46 GPA • 2018 - 2022"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Stay Connected",
+    "subtitle": "Reach out for new projects or just to talk basketball."
+  },
+  "projects": {
+    "badge": "Portfolio",
+    "title": "My Projects",
+    "subtitle": "The projects I build sit at the intersection of AI, natural language processing and modern web technologies.",
+    "cta": "See Details",
+    "back": "All Projects",
+    "features": "Features",
+    "demo": "Demo",
+    "items": {
+      "avatar-chatbot": {
+        "title": "Industry-Based Avatar Chatbot",
+        "subtitle": "Voice & Text AI Assistant System",
+        "shortDescription": "A web-based voice and text Avatar Chatbot that works in 4 languages and delivers industry-focused answers.",
+        "description": "A multilingual avatar chatbot trained on industry-specific knowledge bases, supporting both voice and text communication. It engages with users in real time to produce accurate, contextual answers to sector-specific questions. Built with a TensorFlow and NLTK-based NLP engine, an Angular frontend and a FastAPI backend, it delivers an enterprise-ready solution.",
+        "details": [
+          "Multilingual experience supporting 4 languages (Turkish, English, German, French)",
+          "Natural language understanding and intent classification engine based on TensorFlow and NLTK",
+          "Contextual and accurate responses powered by an industry-specific knowledge base",
+          "Real-time voice interaction through a modern Angular-based web interface",
+          "High-performance, async backend infrastructure built with FastAPI and Python",
+          "Visual and immersive user experience through avatar animation integration"
+        ]
+      }
+    }
+  }
+}

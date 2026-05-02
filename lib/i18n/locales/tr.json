@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "resume": "Özgeçmiş",
+    "contact": "İletişim",
+    "projects": "Projeler"
+  },
+  "hero": {
+    "badge": "Software Engineer",
+    "headlineStart": "Geleceği",
+    "headlineAccent": "Kodla",
+    "headlineEnd": "Şekillendir.",
+    "descPrefix": "Teknolojinin sınırlarını zorlamayı seven bir mühendis olarak;",
+    "descAI": "Yapay Zeka (AI), Doğal Dil İşleme (NLP)",
+    "descMid": "ve akıllı chatbot sistemleri üzerine uzmanlaşıyorum. Veriyi",
+    "descMap": "Haritalama API'ları (Leaflet.js)",
+    "descSuffix": "ile görselleştirerek kullanıcı deneyimini bir üst seviyeye taşımak benim tutkum.",
+    "quote": "Sahadaki stratejiyi koda, kodun hızını hayata yansıtıyorum.",
+    "cta": "Detayları Gör",
+    "downloadCV": "CV İndir"
+  },
+  "resume": {
+    "experience": "Deneyim",
+    "education": "Eğitim",
+    "skills": "Yetenekler",
+    "jobs": [
+      {
+        "key": "fullstack",
+        "title": "Full Stack Developer",
+        "period": "2022 - Devam ediyor",
+        "bullets": [
+          { "title": "Ticket & Dashboard", "text": "Operasyon, çalışan ve görev takibi için Angular 16, MongoDB ve FastAPI kullanarak geliştirilen sistem." },
+          { "title": "Kurye Dolap Uygulaması", "text": "Kurye operasyonlarını hızlandıran, Ionic ve Cordova ile yazılmış mobil çözüm." },
+          { "title": "Eurodis Cargonet Entegrasyonu", "text": "MIP, TIF, CIF gibi eski veri formatlarını .NET, C# ve LINQ ile modern altyapıya taşıma." },
+          { "title": "Harita & Mikroservis", "text": "Leaflet.js, Docker, Kafka, Redis ve Graylog ile kapsayıcı mimaride geliştirilen harita tabanlı uygulamalar." },
+          { "title": "Coğrafi Veri Araçları", "text": "Leaflet.js, MongoDB ve C# kullanılarak poligon çizim ve lokasyon belirleme sistemleri." },
+          { "title": "Bildirim & SMS Sistemi", "text": "Postman ile test edilen, C# mikroservis tabanlı gerçek zamanlı bildirim altyapısı." },
+          { "title": "Görev Yönetim Paneli", "text": "Çalışan performansı takibi için LINQ sorgularıyla oluşturulan raporlama sistemleri." },
+          { "title": "ETL Süreçleri", "text": "Airflow ve Python ile MongoDB'den PostgreSQL'e veri aktarımı ve Metabase raporlamaları." },
+          { "title": "Metin Madenciliği & NLP", "text": "Python, TensorFlow, scikit-learn ve spaCy ile metin sınıflandırma, veri kazıma ve chatbot sistemleri." }
+        ],
+        "description": ""
+      },
+      {
+        "key": "chatbot",
+        "title": "Avatar Chatbot Developer (Freelance)",
+        "period": "2022 - 2023",
+        "bullets": [],
+        "description": "4 farklı dilde çalışan, sektör odaklı yanıtlar veren web tabanlı sesli/yazılı Avatar Chatbot projesi."
+      },
+      {
+        "key": "ai",
+        "title": "AI Developer (Freelance)",
+        "period": "2022",
+        "bullets": [],
+        "description": "Sektörel bağlama göre girdileri kategorize eden yapay zeka chatbotları geliştirilmesi."
+      }
+    ],
+    "schools": [
+      {
+        "key": "itu",
+        "name": "İstanbul Teknik Üniversitesi",
+        "degree": "Bilgi Güvenliği Mühendisliği ve Kriptografi",
+        "detail": "Tezli Yüksek Lisans • 2024 - Devam ediyor"
+      },
+      {
+        "key": "topkapi",
+        "name": "Topkapı Üniversitesi",
+        "degree": "Bilgisayar Mühendisliği",
+        "detail": "Lisans • 3.46 GPA • 2018 - 2022"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Bağlantıda Kalalım",
+    "subtitle": "Yeni projeler veya sadece basketbol konuşmak için bana ulaşın."
+  },
+  "projects": {
+    "badge": "Portföy",
+    "title": "Projelerim",
+    "subtitle": "Geliştirdiğim projeler; yapay zeka, doğal dil işleme ve modern web teknolojilerinin kesişiminde şekilleniyor.",
+    "cta": "Detayları Gör",
+    "back": "Tüm Projeler",
+    "features": "Özellikler",
+    "demo": "Demo",
+    "items": {
+      "avatar-chatbot": {
+        "title": "Sektör Tabanlı Avatar Chatbot",
+        "subtitle": "Sesli & Yazılı AI Asistan Sistemi",
+        "shortDescription": "4 farklı dilde çalışan, sektör odaklı yanıtlar veren web tabanlı sesli/yazılı Avatar Chatbot projesi.",
+        "description": "Farklı sektörlere özel bilgi tabanı üzerine eğitilmiş, sesli ve yazılı iletişim destekleyen çok dilli bir avatar chatbot sistemi. Kullanıcıyla gerçek zamanlı etkileşim kurarak sektöre özgü sorulara doğru ve bağlamsal yanıtlar üretmektedir. TensorFlow ve NLTK tabanlı NLP motoru, Angular frontend ve FastAPI backend altyapısıyla kurumsal kullanıma hazır bir çözüm sunmaktadır.",
+        "details": [
+          "4 farklı dil desteği (Türkçe, İngilizce, Almanca, Fransızca) ile çok dilli kullanıcı deneyimi",
+          "TensorFlow ve NLTK tabanlı doğal dil anlama ve intent sınıflandırma motoru",
+          "Sektöre özel bilgi tabanı ile bağlamsal ve doğru yanıt üretimi",
+          "Angular tabanlı modern web arayüzü ile gerçek zamanlı sesli etkileşim",
+          "FastAPI ve Python ile yüksek performanslı, asenkron backend altyapısı",
+          "Avatar animasyon entegrasyonu ile görsel ve sürükleyici kullanıcı deneyimi"
+        ]
+      }
+    }
+  }
+}

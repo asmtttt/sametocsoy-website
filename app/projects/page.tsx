@@ -1,15 +1,14 @@
-import type { Metadata } from "next";
+"use client";
+
 import Navbar from "@/components/layout/Navbar";
 import BackgroundBlur from "@/components/ui/BackgroundBlur";
 import ProjectCard from "@/components/projects/ProjectCard";
+import { useTranslation } from "@/lib/i18n";
 import { projects } from "@/lib/projects";
 
-export const metadata: Metadata = {
-  title: "Projeler | Samet Öçsoy",
-  description: "Samet Öçsoy'un geliştirdiği yazılım projeleri.",
-};
-
 export default function ProjectsPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-[#030712] text-slate-200 selection:bg-blue-500/30 selection:text-blue-200 font-sans tracking-tight">
       <Navbar />
@@ -18,14 +17,13 @@ export default function ProjectsPage() {
         <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
           <div className="mb-16">
             <div className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-6 tracking-widest uppercase">
-              Portföy
+              {t.projects.badge}
             </div>
             <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight text-white leading-[1.1]">
-              Projelerim
+              {t.projects.title}
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
-              Geliştirdiğim projeler; yapay zeka, doğal dil işleme ve modern web teknolojilerinin
-              kesişiminde şekilleniyor.
+              {t.projects.subtitle}
             </p>
           </div>
 

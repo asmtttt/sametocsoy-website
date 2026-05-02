@@ -3,22 +3,19 @@
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import { useTranslation } from "@/lib/i18n";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 type NavbarProps = {
   activeTab?: string;
   setActiveTab?: (tab: string) => void;
 };
 
-const HOME_TABS = [
-  { key: "about", label: "Hakkımda" },
-  { key: "resume", label: "Özgeçmiş" },
-  { key: "contact", label: "İletişim" },
-];
-
 export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  const { t } = useTranslation();
   const isOnProjects = pathname.startsWith("/projects");
 
   useEffect(() => {
@@ -35,6 +32,11 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
     }
   };
 
+  const homeTabs = [
+    { key: "about", label: t.nav.about },
+    { key: "resume", label: t.nav.resume },
+  ];
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 border-b ${
@@ -50,30 +52,45 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
         >
           Samet Öçsoy
         </Link>
-        <div className="flex gap-6 md:gap-8 text-sm font-medium">
-          {HOME_TABS.map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => handleHomeTab(key)}
+
+        <div className="flex items-center gap-6 md:gap-8">
+          <div className="flex gap-6 md:gap-8 text-sm font-medium">
+            {homeTabs.map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() => handleHomeTab(key)}
+                className={`cursor-pointer transition-all duration-300 ${
+                  !isOnProjects && activeTab === key
+                    ? "text-blue-400 scale-105"
+                    : "text-slate-400 hover:text-blue-300"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+            <Link
+              href="/projects"
               className={`cursor-pointer transition-all duration-300 ${
-                !isOnProjects && activeTab === key
+                isOnProjects
                   ? "text-blue-400 scale-105"
                   : "text-slate-400 hover:text-blue-300"
               }`}
             >
-              {label}
+              {t.nav.projects}
+            </Link>
+            <button
+              onClick={() => handleHomeTab("contact")}
+              className={`cursor-pointer transition-all duration-300 ${
+                !isOnProjects && activeTab === "contact"
+                  ? "text-blue-400 scale-105"
+                  : "text-slate-400 hover:text-blue-300"
+              }`}
+            >
+              {t.nav.contact}
             </button>
-          ))}
-          <Link
-            href="/projects"
-            className={`cursor-pointer transition-all duration-300 ${
-              isOnProjects
-                ? "text-blue-400 scale-105"
-                : "text-slate-400 hover:text-blue-300"
-            }`}
-          >
-            Projeler
-          </Link>
+          </div>
+
+          <LanguageSwitcher />
         </div>
       </div>
     </nav>
