@@ -51,7 +51,7 @@ export default function AboutSection({ onViewDetails }: AboutSectionProps) {
 
         <div className="relative flex justify-center">
           <div className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full" />
-          <div className="relative w-72 h-72 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/50 shadow-2xl flex items-center justify-center text-8xl grayscale hover:grayscale-0 transition-all duration-700 ease-in-out transform hover:scale-105 cursor-pointer">
+          <div className="relative w-72 h-72 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/50 shadow-2xl flex items-center justify-center text-8xl transition-all duration-700 ease-in-out transform hover:scale-105 cursor-pointer">
             🚀
           </div>
         </div>

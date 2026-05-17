@@ -6,18 +6,18 @@
     "projects": "Projects"
   },
   "hero": {
-    "badge": "Software Engineer",
-    "headlineStart": "Shape the",
-    "headlineAccent": "Future",
-    "headlineEnd": "with Code.",
-    "descPrefix": "As an engineer who loves pushing the boundaries of technology;",
-    "descAI": "Artificial Intelligence (AI), Natural Language Processing (NLP)",
-    "descMid": "and intelligent chatbot systems are my specialty. Visualizing data with",
-    "descMap": "Mapping APIs (Leaflet.js)",
-    "descSuffix": "to take the user experience to the next level is my passion.",
-    "quote": "I turn field strategy into code, and code's speed into life.",
+    "badge": "Full Stack & AI Engineer",
+    "headlineStart": "Software Engineer,",
+    "headlineAccent": "basketball",
+    "headlineEnd": "coach.",
+    "descPrefix": "I'm a Full Stack Developer and basketball coach. Lately I've been deep in",
+    "descAI": "system integrations, microservice architectures and DB performance optimization,",
+    "descMid": "while also working on",
+    "descMap": "mapping applications, geocoding and natural language processing.",
+    "descSuffix": "",
+    "quote": "Building a solid system is like building a solid team — get the foundation right first.",
     "cta": "See Details",
-    "downloadCV": "Download CV"
+    "downloadCV": "Download Resume"
   },
   "resume": {
     "experience": "Experience",

@@ -6,18 +6,18 @@
     "projects": "Projeler"
   },
   "hero": {
-    "badge": "Software Engineer",
-    "headlineStart": "Geleceği",
-    "headlineAccent": "Kodla",
-    "headlineEnd": "Şekillendir.",
-    "descPrefix": "Teknolojinin sınırlarını zorlamayı seven bir mühendis olarak;",
-    "descAI": "Yapay Zeka (AI), Doğal Dil İşleme (NLP)",
-    "descMid": "ve akıllı chatbot sistemleri üzerine uzmanlaşıyorum. Veriyi",
-    "descMap": "Haritalama API'ları (Leaflet.js)",
-    "descSuffix": "ile görselleştirerek kullanıcı deneyimini bir üst seviyeye taşımak benim tutkum.",
-    "quote": "Sahadaki stratejiyi koda, kodun hızını hayata yansıtıyorum.",
+    "badge": "Full Stack & AI Engineer",
+    "headlineStart": "Yazılım Mühendisi,",
+    "headlineAccent": "basketbol",
+    "headlineEnd": "koçu.",
+    "descPrefix": "Full Stack Developer ve basketbol antrenörüyüm. Son dönemde",
+    "descAI": "sistem entegrasyonları, mikroservis mimarileri ve DB performans optimizasyonu",
+    "descMid": "üzerinde yoğunlaşırken bir yandan da",
+    "descMap": "harita uygulamaları, geocoding ve doğal dil işleme",
+    "descSuffix": "gibi alanlarda da çalışmalar yürütüyorum.",
+    "quote": "İyi bir sistem kurmak, iyi bir takım kurmakla aynı şey — önce temeli sağlam at.",
     "cta": "Detayları Gör",
-    "downloadCV": "CV İndir"
+    "downloadCV": "Özgeçmişimi İndir"
   },
   "resume": {
     "experience": "Deneyim",
