@@ -19,7 +19,7 @@ type I18nContextType = {
 const I18nContext = createContext<I18nContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("tr");
+  const [locale, setLocaleState] = useState<Locale>("en");
 
   useEffect(() => {
     const saved = localStorage.getItem("locale") as Locale | null;
