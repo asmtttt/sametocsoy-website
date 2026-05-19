@@ -97,6 +97,20 @@
           "High-performance, async backend infrastructure built with FastAPI and Python",
           "Visual and immersive user experience through avatar animation integration"
         ]
+      },
+      "disaster-management": {
+        "title": "Earthquake Analysis & Management System",
+        "subtitle": "Real-Time Disaster Response & Inventory Platform",
+        "shortDescription": "An IoT-driven platform that visualizes real-time building damage status and trapped population data across Istanbul on interactive maps after an earthquake.",
+        "description": "A comprehensive disaster response platform that monitors the structural condition of every registered building in Istanbul in real time — classifying each as standing, damaged, or collapsed — using IoT sensors installed on-site. The system maps the number of people in each building and calculates how many may be trapped under debris at any given moment. After a seismic event, it instantly generates a city-wide damage assessment and uses inventory management algorithms to produce actionable reports and resource allocation recommendations for emergency responders.",
+        "details": [
+          "Real-time building damage classification (standing / damaged / collapsed) via IoT sensor data",
+          "Interactive map visualization showing per-building occupancy and debris-trapped population estimates",
+          "Live city-wide dashboard tracking the total number of people potentially under rubble in Istanbul",
+          "IoT sensor network feeding continuous structural data into the central database",
+          "Post-earthquake automated damage balance sheet covering the entire city",
+          "Inventory management algorithms generating prioritized response reports and resource recommendations"
+        ]
       }
     }
   }

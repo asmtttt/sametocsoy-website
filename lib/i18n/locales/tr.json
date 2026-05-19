@@ -97,6 +97,20 @@
           "FastAPI ve Python ile yüksek performanslı, asenkron backend altyapısı",
           "Avatar animasyon entegrasyonu ile görsel ve sürükleyici kullanıcı deneyimi"
         ]
+      },
+      "disaster-management": {
+        "title": "Deprem Analiz ve Yönetim Sistemi",
+        "subtitle": "Gerçek Zamanlı Afet Müdahale ve Envanter Platformu",
+        "shortDescription": "Deprem sonrasında İstanbul'daki binaların hasar durumunu ve göçük altındaki nüfusu anlık olarak interaktif haritalar üzerinde görselleştiren IoT destekli bir afet yönetim sistemi.",
+        "description": "İstanbul genelindeki kayıtlı tüm binalarda yapısal durumu gerçek zamanlı olarak izleyen; her binayı ayakta, hasarlı veya yıkık olarak sınıflandıran kapsamlı bir afet müdahale platformu. Binalara entegre IoT sensörleri aracılığıyla veriler anlık olarak sisteme aktarılır. Her binadaki kişi sayısı harita üzerinde görselleştirilir ve herhangi bir anda göçük altında kalabilecek nüfus hesaplanır. Deprem sonrasında şehir genelinde otomatik hasar bilançosu oluşturulur; envanter yönetim algoritmaları aracılığıyla acil müdahale ekiplerine öncelikli raporlar ve kaynak tahsis önerileri sunulur.",
+        "details": [
+          "IoT sensör verileriyle gerçek zamanlı bina hasar sınıflandırması (ayakta / hasarlı / yıkık)",
+          "Her binanın doluluk ve göçük altı tahmini nüfusunu gösteren interaktif harita görselleştirmesi",
+          "İstanbul genelinde anlık göçük altındaki toplam nüfusu izleyen canlı şehir tablosu",
+          "Sürekli yapısal veriyi merkezi veri tabanına ileten IoT sensör ağı altyapısı",
+          "Deprem sonrası tüm şehri kapsayan otomatik hasar bilançosu çıkarımı",
+          "Öncelikli müdahale raporları ve kaynak önerileri üreten envanter yönetim algoritmaları"
+        ]
       }
     }
   }

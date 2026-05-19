@@ -15,6 +15,13 @@ export const projects: Project[] = [
     tags: ["Angular", "FastAPI", "Python", "TensorFlow", "NLTK", "NLP"],
     videoUrl: "https://www.youtube.com/embed/-EjCuHqlyRw",
   },
+  {
+    slug: "disaster-management",
+    year: "2025",
+    company: "Personal Project",
+    tags: ["IoT", "Leaflet.js", "FastAPI", "Python", "PostgreSQL", "Real-Time", "Mapping"],
+    videoUrl: "https://www.youtube.com/embed/s9CRZeMbEXA",
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
