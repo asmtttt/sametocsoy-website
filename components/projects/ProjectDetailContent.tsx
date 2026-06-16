@@ -4,11 +4,12 @@ import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import BackgroundBlur from "@/components/ui/BackgroundBlur";
 import ProjectVideo from "@/components/projects/ProjectVideo";
+import ProjectScreenshots from "@/components/projects/ProjectScreenshots";
 import { useTranslation } from "@/lib/i18n";
 import type { Project } from "@/lib/projects";
 
 export default function ProjectDetailContent({ project }: { project: Project }) {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const content = t.projects.items[project.slug as keyof typeof t.projects.items];
 
   if (!content) return null;
@@ -29,9 +30,17 @@ export default function ProjectDetailContent({ project }: { project: Project }) 
           </Link>
 
           <div className="space-y-4">
-            <p className="text-[10px] font-black tracking-widest uppercase text-blue-400/70">
-              {project.company} • {project.year}
-            </p>
+            <div className="flex items-center gap-3 flex-wrap">
+              <p className="text-[10px] font-black tracking-widest uppercase text-blue-400/70">
+                {project.company} • {project.year}
+              </p>
+              {project.isLive && (
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  {t.projects.live}
+                </span>
+              )}
+            </div>
             <h1 className="text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.1]">
               {content.title}
             </h1>
@@ -48,10 +57,26 @@ export default function ProjectDetailContent({ project }: { project: Project }) 
             </div>
           </div>
 
-          <p className="text-slate-300 text-lg leading-relaxed max-w-3xl">
-            {content.description}
-          </p>
+          <div className="space-y-3">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-base font-semibold text-blue-400 hover:text-blue-300 transition-colors duration-200 cursor-pointer group w-fit"
+              >
+                Uygulama
+                <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </a>
+            )}
+            <p className="text-slate-300 text-lg leading-relaxed max-w-3xl">
+              {content.description}
+            </p>
+          </div>
 
+          {project.screenshots && (
+            <ProjectScreenshots screenshots={project.screenshots} lang={locale} />
+          )}
           {project.videoUrl && <ProjectVideo url={project.videoUrl} />}
 
           <div className="space-y-4">

@@ -83,7 +83,25 @@
     "back": "Tüm Projeler",
     "features": "Özellikler",
     "demo": "Demo",
+    "live": "Yayında (Canlı)",
     "items": {
+      "qrder": {
+        "title": "Qrder — İşletme Yönetim Platformu",
+        "subtitle": "SaaS Masa, Menü & Operasyon Yönetimi",
+        "shortDescription": "Qrder; işletmelerin masalarını, menülerini, siparişlerini ve personellerini gerçek zamanlı yönetmesine olanak tanıyan, QR kodlu müşteri menüsü ve derinlemesine operasyonel analizler sunan bir SaaS platformudur.",
+        "description": "Qrder, uçtan uca sipariş ve operasyon deneyimini dijitalleştiren bulut tabanlı bir işletme yönetim platformudur. İşletme sahipleri masalara QR kodlu menüler tanımlayabilir, siparişleri anlık takip edebilir, detaylı raporlar üzerinden ciroyu ve yoğun saatleri analiz edebilir; müşteri arayüzünü kendi markaları ile özelleştirebilir. Platform; sade bir başlangıç paketinden tam kapsamlı çoklu şube kurumsal çözümüne uzanan katmanlı abonelik modeli ile sunulmaktadır.",
+        "details": [
+          "Her masa için QR kod üretimi — müşteriler tarayarak markalı dijital menüye ulaşır",
+          "Gerçek zamanlı masa durumu paneli (boş / dolu / bekleyen)",
+          "Tam kapsamlı menü yönetimi: kategoriler, ürün görselleri, fiyatlandırma, aktif/pasif durumu ve öne çıkan ürün etiketleri",
+          "Yönetici ve personel rolleriyle ayrılmış rol tabanlı personel yönetimi",
+          "Canlı takip ve PDF dışa aktarımlı haftalık/aylık ayrıntılı analiz raporları",
+          "Saatlik sipariş dağılım grafikleri ve en çok satılan ürün sıralamaları",
+          "Ciro ve trafik verilerine dayalı yapay zeka destekli öneriler",
+          "İşletme özelleştirme: logo, renk paleti ve adres bilgileri müşteri arayüzüne anlık yansır",
+          "Kademeli SaaS aboneliği: Başlangıç, Profesyonel ve Çoklu Şube kurumsal paketleri"
+        ]
+      },
       "avatar-chatbot": {
         "title": "Sektör Tabanlı Avatar Chatbot",
         "subtitle": "Sesli & Yazılı AI Asistan Sistemi",

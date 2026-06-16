@@ -14,9 +14,17 @@ export default function ProjectCard({ project }: { project: Project }) {
     <div className="group relative p-8 rounded-3xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/40 transition-all duration-500 hover:bg-slate-900/60 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(59,130,246,0.07)]">
       <div className="flex flex-col gap-5">
         <div>
-          <p className="text-[10px] font-black tracking-widest uppercase text-blue-400/70 mb-2">
-            {project.company} • {project.year}
-          </p>
+          <div className="flex items-center gap-3 flex-wrap mb-2">
+            <p className="text-[10px] font-black tracking-widest uppercase text-blue-400/70">
+              {project.company} • {project.year}
+            </p>
+            {project.isLive && (
+              <span className="inline-flex items-center gap-1 text-[10px] font-black tracking-widest uppercase px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                {t.projects.live}
+              </span>
+            )}
+          </div>
           <h3 className="text-2xl font-black text-white tracking-tight leading-tight group-hover:text-blue-300 transition-colors duration-300">
             {content.title}
           </h3>

@@ -83,7 +83,25 @@
     "back": "All Projects",
     "features": "Features",
     "demo": "Demo",
+    "live": "Live",
     "items": {
+      "qrder": {
+        "title": "Qrder — Business Management Platform",
+        "subtitle": "SaaS Table, Menu & Operations Management",
+        "shortDescription": "Qrder is a SaaS platform that lets businesses manage tables, menus, orders and staff in real time — complete with QR-code-linked customer menus and in-depth operational analytics.",
+        "description": "Qrder is a cloud-based business management platform that digitizes the end-to-end order and operations experience. Owners can assign QR-code-linked menus to tables, track orders in real time, analyze revenue and peak hours through detailed reports, and customize the customer-facing menu with their own branding. The platform is offered as a tiered subscription SaaS — from a lean starter package to a full multi-branch enterprise solution.",
+        "details": [
+          "QR code generation per table — customers scan to open a branded digital menu",
+          "Real-time table status dashboard (empty / occupied / waiting)",
+          "Full menu management: categories, product images, pricing, active/inactive toggle, and featured item labels",
+          "Staff management with role-based access for managers and personnel",
+          "Live tracking plus detailed weekly and monthly analytics reports with PDF export",
+          "Hourly order distribution charts and best-selling product rankings",
+          "AI-powered recommendations based on revenue and traffic patterns",
+          "Business customization: logo, color palette, and address synced to the customer-facing menu",
+          "Tiered SaaS subscription: Starter, Professional, and Multi-branch enterprise plans"
+        ]
+      },
       "avatar-chatbot": {
         "title": "Industry-Based Avatar Chatbot",
         "subtitle": "Voice & Text AI Assistant System",
