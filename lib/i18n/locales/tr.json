@@ -84,7 +84,28 @@
     "features": "Özellikler",
     "demo": "Demo",
     "live": "Yayında (Canlı)",
+    "download": "İndir",
+    "downloadTitle": "Uygulamayı İndir",
+    "downloadSubtitle": "Erişim için parola gereklidir. Satın alma sonrasında size iletilecektir.",
+    "passwordPlaceholder": "Parolanızı girin",
+    "passwordError": "Hatalı parola",
+    "downloadStart": "İndirmeyi Başlat",
     "items": {
+      "scrapex": {
+        "title": "Scrapex — İşletme Veri Toplama Aracı",
+        "subtitle": "Google Maps Scraping & WhatsApp Outreach",
+        "shortDescription": "İstanbul'daki işletmeleri Google Maps'ten toplayıp WhatsApp üzerinden doğrudan ulaşmanızı sağlayan masaüstü uygulama.",
+        "description": "Scrapex, satış ekipleri için geliştirilen yerel çalışan bir masaüstü uygulamasıdır. Google Maps'ten kategori ve mahalle bazında işletme verisi çeker; telefon, adres, puan ve yorum bilgilerini analiz eder. Dahili WhatsApp outreach modülü ile mesaj şablonları oluşturabilir, her işletmeye tek tıkla WhatsApp Web üzerinden ulaşabilirsiniz.",
+        "details": [
+          "Google Maps'ten kategori ve mahalle bazında işletme toplama",
+          "Koordinat tabanlı hassas arama — ilçe ve mahalle sınırlarına kilitli viewport",
+          "Otomatik telefon doğrulama ve GSM tipi tespiti",
+          "Google Maps yorumlarını scrape etme ve analiz etme",
+          "Dataset yönetimi ile işletmeleri gruplama ve CSV dışa aktarım",
+          "Dahili WhatsApp outreach: şablon editörü, gönderim takibi, durum yönetimi",
+          "Tamamen yerel çalışır — sunucu yok, veri dışarı çıkmaz"
+        ]
+      },
       "qrder": {
         "title": "Qrder — İşletme Yönetim Platformu",
         "subtitle": "SaaS Masa, Menü & Operasyon Yönetimi",

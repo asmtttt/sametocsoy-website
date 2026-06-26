@@ -1,12 +1,77 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import BackgroundBlur from "@/components/ui/BackgroundBlur";
 import ProjectVideo from "@/components/projects/ProjectVideo";
 import ProjectScreenshots from "@/components/projects/ProjectScreenshots";
 import { useTranslation } from "@/lib/i18n";
 import type { Project } from "@/lib/projects";
+
+function DownloadSection({ project, t }: { project: Project; t: any }) {
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+  const [unlocked, setUnlocked] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === project.downloadPassword) {
+      setError(false);
+      setUnlocked(true);
+      window.location.href = project.downloadUrl!;
+    } else {
+      setError(true);
+      setPassword("");
+    }
+  };
+
+  return (
+    <div className="border border-blue-500/10 rounded-2xl bg-blue-500/5 p-6 space-y-4">
+      <div className="space-y-1">
+        <h2 className="text-lg font-bold text-white">{t.projects.downloadTitle}</h2>
+        <p className="text-sm text-slate-400">{t.projects.downloadSubtitle}</p>
+      </div>
+
+      {unlocked ? (
+        <div className="flex items-center gap-2 text-emerald-400 text-sm font-semibold">
+          <span className="w-2 h-2 rounded-full bg-emerald-400" />
+          İndirme başladı...
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="flex gap-3 items-start">
+          <div className="flex flex-col gap-1.5">
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => { setPassword(e.target.value); setError(false); }}
+              placeholder={t.projects.passwordPlaceholder}
+              className={`bg-white/5 border rounded-xl px-4 py-2.5 text-sm text-slate-200 placeholder:text-slate-600 outline-none focus:ring-1 transition-all w-56 ${
+                error
+                  ? "border-red-500/50 focus:ring-red-500/30"
+                  : "border-white/10 focus:ring-blue-500/30 focus:border-blue-500/30"
+              }`}
+            />
+            {error && (
+              <span className="text-xs text-red-400 font-medium">{t.projects.passwordError}</span>
+            )}
+          </div>
+          <button
+            type="submit"
+            className="inline-flex items-center gap-2 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/20 hover:border-blue-500/40 text-blue-300 font-semibold text-sm px-4 py-2.5 rounded-xl transition-all duration-200"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            {t.projects.downloadStart}
+          </button>
+        </form>
+      )}
+    </div>
+  );
+}
 
 export default function ProjectDetailContent({ project }: { project: Project }) {
   const { t, locale } = useTranslation();
@@ -90,6 +155,10 @@ export default function ProjectDetailContent({ project }: { project: Project }) 
               ))}
             </ul>
           </div>
+
+          {project.downloadUrl && project.downloadUrl !== "GITHUB_RELEASE_URL_BURAYA" && (
+            <DownloadSection project={project} t={t} />
+          )}
 
         </div>
       </main>

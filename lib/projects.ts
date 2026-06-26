@@ -14,9 +14,20 @@ export type Project = {
   screenshots?: ProjectScreenshots;
   isLive?: boolean;
   liveUrl?: string;
+  downloadUrl?: string;
+  downloadPassword?: string;
 };
 
 export const projects: Project[] = [
+  {
+    slug: "scrapex",
+    year: "2025",
+    company: "Personal Project",
+    tags: ["Electron", "React", "Playwright", "SQLite", "Google Maps", "WhatsApp"],
+    isLive: false,
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1wQEesBqSb2H603oxXM17VDe0OZunIgox",
+    downloadPassword: "scrapex2025",
+  },
   {
     slug: "qrder",
     year: "2025",

@@ -84,7 +84,28 @@
     "features": "Features",
     "demo": "Demo",
     "live": "Live",
+    "download": "Download",
+    "downloadTitle": "Download the App",
+    "downloadSubtitle": "A password is required. It will be provided after purchase.",
+    "passwordPlaceholder": "Enter your password",
+    "passwordError": "Incorrect password",
+    "downloadStart": "Start Download",
     "items": {
+      "scrapex": {
+        "title": "Scrapex — Business Data Collection Tool",
+        "subtitle": "Google Maps Scraping & WhatsApp Outreach",
+        "shortDescription": "A desktop app that collects businesses from Google Maps across Istanbul and lets you reach them directly via WhatsApp.",
+        "description": "Scrapex is a locally-running desktop application built for sales teams. It scrapes business data from Google Maps by category and neighborhood, and analyzes phone numbers, addresses, ratings and reviews. The built-in WhatsApp outreach module lets you create message templates and reach any business in one click via WhatsApp Web.",
+        "details": [
+          "Collect businesses from Google Maps by category and neighborhood",
+          "Coordinate-anchored precision search — viewport locked to district and neighborhood boundaries",
+          "Automatic phone validation and mobile type detection",
+          "Scrape and analyze Google Maps reviews per business",
+          "Dataset management for grouping businesses and CSV export",
+          "Built-in WhatsApp outreach: template editor, send tracking, status management",
+          "Runs entirely locally — no server, no data leaves your machine"
+        ]
+      },
       "qrder": {
         "title": "Qrder — Business Management Platform",
         "subtitle": "SaaS Table, Menu & Operations Management",
