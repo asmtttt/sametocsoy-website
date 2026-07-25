@@ -11,33 +11,33 @@ export default function ProjectCard({ project }: { project: Project }) {
   if (!content) return null;
 
   return (
-    <div className="group relative p-8 rounded-3xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/40 transition-all duration-500 hover:bg-slate-900/60 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(59,130,246,0.07)]">
+    <div className="group relative p-8 rounded-3xl bg-sand/40 border border-sand-dark hover:border-bronze/40 transition-all duration-500 hover:bg-sand/60 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(165,127,98,0.12)]">
       <div className="flex flex-col gap-5">
         <div>
           <div className="flex items-center gap-3 flex-wrap mb-2">
-            <p className="text-[10px] font-black tracking-widest uppercase text-blue-400/70">
+            <p className="text-[10px] font-black tracking-widest uppercase text-bronze">
               {project.company} • {project.year}
             </p>
             {project.isLive && (
-              <span className="inline-flex items-center gap-1 text-[10px] font-black tracking-widest uppercase px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="inline-flex items-center gap-1 text-[10px] font-black tracking-widest uppercase px-2 py-0.5 rounded-full bg-emerald-600/10 border border-emerald-600/20 text-emerald-700">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
                 {t.projects.live}
               </span>
             )}
           </div>
-          <h3 className="text-2xl font-black text-white tracking-tight leading-tight group-hover:text-blue-300 transition-colors duration-300">
+          <h3 className="text-2xl font-black text-navy tracking-tight leading-tight group-hover:text-bronze transition-colors duration-300">
             {content.title}
           </h3>
-          <p className="text-slate-400 text-sm font-medium mt-1 italic">{content.subtitle}</p>
+          <p className="text-navy-muted text-sm font-medium mt-1 italic">{content.subtitle}</p>
         </div>
 
-        <p className="text-slate-400 text-sm leading-relaxed">{content.shortDescription}</p>
+        <p className="text-brown text-sm leading-relaxed">{content.shortDescription}</p>
 
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[10px] px-2.5 py-1 rounded-lg bg-blue-500/5 border border-blue-500/10 text-blue-400/80 uppercase font-bold tracking-wider"
+              className="text-[10px] px-2.5 py-1 rounded-lg bg-bronze/5 border border-bronze/10 text-bronze uppercase font-bold tracking-wider"
             >
               {tag}
             </span>
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
         <Link
           href={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-2 text-sm font-bold text-blue-400 hover:text-white transition-colors duration-300 group/link w-fit"
+          className="inline-flex items-center gap-2 text-sm font-bold text-bronze hover:text-navy transition-colors duration-300 group/link w-fit"
         >
           {t.projects.cta}
           <span className="transition-transform duration-300 group-hover/link:translate-x-1">→</span>

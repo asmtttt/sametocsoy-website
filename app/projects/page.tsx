@@ -10,19 +10,19 @@ export default function ProjectsPage() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-[#030712] text-slate-200 selection:bg-blue-500/30 selection:text-blue-200 font-sans tracking-tight">
+    <div className="min-h-screen bg-sand-light text-brown selection:bg-tangerine/25 selection:text-brown font-sans tracking-tight">
       <Navbar />
 
       <main className="max-w-5xl mx-auto px-6 pt-32 pb-20">
         <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
           <div className="mb-16">
-            <div className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-6 tracking-widest uppercase">
+            <div className="inline-block px-3 py-1 rounded-full bg-bronze/10 border border-bronze/20 text-bronze text-xs font-bold mb-6 tracking-widest uppercase">
               {t.projects.badge}
             </div>
-            <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight text-white leading-[1.1]">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight text-navy leading-[1.1]">
               {t.projects.title}
             </h1>
-            <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
+            <p className="text-lg text-navy-muted leading-relaxed max-w-2xl">
               {t.projects.subtitle}
             </p>
           </div>

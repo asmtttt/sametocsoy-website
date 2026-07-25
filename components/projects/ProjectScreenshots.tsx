@@ -84,8 +84,8 @@ export default function ProjectScreenshots({
                 onClick={() => handleTabChange(tab.key)}
                 className={`cursor-pointer px-4 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all duration-200 ${
                   activeTab === tab.key
-                    ? "bg-blue-500 text-white"
-                    : "bg-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-700"
+                    ? "bg-bronze text-brown font-black"
+                    : "bg-sand text-navy-muted hover:text-navy hover:bg-sand-dark"
                 }`}
               >
                 {lang === "tr" ? tab.labelTr : tab.labelEn}
@@ -101,7 +101,7 @@ export default function ProjectScreenshots({
               <button
                 onClick={prev}
                 disabled={index === 0}
-                className="cursor-pointer shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-20 disabled:cursor-not-allowed transition-all"
+                className="cursor-pointer shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-sand text-navy hover:bg-sand-dark disabled:opacity-20 disabled:cursor-not-allowed transition-all"
                 aria-label="Previous"
               >
                 ←
@@ -110,11 +110,11 @@ export default function ProjectScreenshots({
 
             <div
               onClick={openLightbox}
-              className="group/thumb flex-1 overflow-y-auto max-h-[520px] rounded-2xl border border-slate-700/60 hover:border-slate-500/80 shadow-2xl hover:shadow-[0_0_40px_rgba(148,163,184,0.08)] bg-slate-900/30 scroll-smooth cursor-pointer transition-all duration-300
+              className="group/thumb flex-1 overflow-y-auto max-h-[520px] rounded-2xl border border-sand-dark hover:border-bronze/50 shadow-2xl hover:shadow-[0_0_40px_rgba(165,127,98,0.12)] bg-sand/30 scroll-smooth cursor-pointer transition-all duration-300
                 [&::-webkit-scrollbar]:w-1.5
                 [&::-webkit-scrollbar-track]:bg-transparent
                 [&::-webkit-scrollbar-thumb]:rounded-full
-                [&::-webkit-scrollbar-thumb]:bg-slate-700"
+                [&::-webkit-scrollbar-thumb]:bg-sand-dark"
             >
               <Image
                 key={`${activeTab}-${index}`}
@@ -132,7 +132,7 @@ export default function ProjectScreenshots({
               <button
                 onClick={next}
                 disabled={index === images.length - 1}
-                className="cursor-pointer shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-20 disabled:cursor-not-allowed transition-all"
+                className="cursor-pointer shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-sand text-navy hover:bg-sand-dark disabled:opacity-20 disabled:cursor-not-allowed transition-all"
                 aria-label="Next"
               >
                 →
@@ -147,7 +147,7 @@ export default function ProjectScreenshots({
                   key={i}
                   onClick={() => setIndex(i)}
                   className={`cursor-pointer h-2 rounded-full transition-all duration-200 ${
-                    i === index ? "bg-blue-500 w-4" : "bg-slate-600 hover:bg-slate-500 w-2"
+                    i === index ? "bg-bronze w-4" : "bg-sand-dark hover:bg-bronze/50 w-2"
                   }`}
                   aria-label={`Go to screenshot ${i + 1}`}
                 />

@@ -34,7 +34,7 @@ export const projects: Project[] = [
     company: "Personal Project",
     tags: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Supabase", "PostgreSQL", "QR Code"],
     isLive: true,
-    liveUrl: "https://www.qrder.net",
+    liveUrl: "https://www.qrder.net/",
     screenshots: {
       phone: [
         "/projects/qrder/phone1.jpeg",

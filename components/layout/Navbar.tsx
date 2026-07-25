@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslation } from "@/lib/i18n";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
@@ -64,17 +65,22 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 border-b ${
         scrolled
-          ? "bg-[#030712]/90 backdrop-blur-lg border-slate-800 py-4 shadow-2xl"
+          ? "bg-sand-light/90 backdrop-blur-lg border-sand-dark py-4 shadow-2xl"
           : "bg-transparent border-transparent py-6"
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-xl font-bold tracking-tighter bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent"
-        >
-          Samet Öçsoy
+        <Link href="/" className="flex items-center gap-2.5 shrink-0">
+          <Image
+            src="/assets/logos/sametocsoy-logo.png"
+            alt="Samet Öçsoy"
+            width={36}
+            height={36}
+            className="rounded-lg"
+            priority
+          />
+          <span className="text-xl font-bold tracking-tighter text-navy">Samet Öçsoy</span>
         </Link>
 
         {/* Desktop nav */}
@@ -86,7 +92,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
                   key={item.key}
                   href={item.href!}
                   className={`transition-all duration-300 ${
-                    isActive(item) ? "text-blue-400 scale-105" : "text-slate-400 hover:text-blue-300"
+                    isActive(item) ? "text-bronze scale-105" : "text-navy-muted hover:text-bronze"
                   }`}
                 >
                   {item.label}
@@ -96,7 +102,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
                   key={item.key}
                   onClick={() => handleHomeTab(item.key)}
                   className={`cursor-pointer transition-all duration-300 ${
-                    isActive(item) ? "text-blue-400 scale-105" : "text-slate-400 hover:text-blue-300"
+                    isActive(item) ? "text-bronze scale-105" : "text-navy-muted hover:text-bronze"
                   }`}
                 >
                   {item.label}
@@ -112,7 +118,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
           <LanguageSwitcher />
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            className="cursor-pointer p-2 rounded-lg border border-slate-800 bg-slate-900/50 text-slate-300 hover:border-slate-600 transition-all duration-300"
+            className="cursor-pointer p-2 rounded-lg border border-sand-dark bg-sand/60 text-brown hover:border-bronze/50 transition-all duration-300"
             aria-label="Toggle menu"
           >
             {menuOpen ? (
@@ -128,15 +134,15 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
 
           {/* Mobile dropdown */}
           {menuOpen && (
-            <div className="absolute top-full left-0 right-0 mt-1 mx-4 rounded-2xl border border-slate-800 bg-[#030712]/95 backdrop-blur-lg shadow-2xl overflow-hidden">
+            <div className="absolute top-full left-0 right-0 mt-1 mx-4 rounded-2xl border border-sand-dark bg-sand-light/95 backdrop-blur-lg shadow-2xl overflow-hidden">
               {navItems.map((item) =>
                 item.type === "link" ? (
                   <Link
                     key={item.key}
                     href={item.href!}
                     onClick={() => setMenuOpen(false)}
-                    className={`flex items-center px-6 py-4 text-sm font-medium border-b border-slate-800/50 last:border-0 transition-colors duration-200 ${
-                      isActive(item) ? "text-blue-400 bg-blue-500/5" : "text-slate-300 hover:bg-slate-800/40"
+                    className={`flex items-center px-6 py-4 text-sm font-medium border-b border-sand-dark/50 last:border-0 transition-colors duration-200 ${
+                      isActive(item) ? "text-bronze bg-bronze/10" : "text-brown hover:bg-sand-dark/40"
                     }`}
                   >
                     {item.label}
@@ -145,8 +151,8 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
                   <button
                     key={item.key}
                     onClick={() => handleHomeTab(item.key)}
-                    className={`cursor-pointer w-full text-left flex items-center px-6 py-4 text-sm font-medium border-b border-slate-800/50 last:border-0 transition-colors duration-200 ${
-                      isActive(item) ? "text-blue-400 bg-blue-500/5" : "text-slate-300 hover:bg-slate-800/40"
+                    className={`cursor-pointer w-full text-left flex items-center px-6 py-4 text-sm font-medium border-b border-sand-dark/50 last:border-0 transition-colors duration-200 ${
+                      isActive(item) ? "text-bronze bg-bronze/10" : "text-brown hover:bg-sand-dark/40"
                     }`}
                   >
                     {item.label}

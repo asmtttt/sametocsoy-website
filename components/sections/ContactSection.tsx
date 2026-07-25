@@ -27,10 +27,10 @@ export default function ContactSection() {
 
   return (
     <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out text-center py-10">
-      <h2 className="text-4xl font-black mb-4 text-white tracking-tighter uppercase cursor-default">
+      <h2 className="text-4xl font-black mb-4 text-navy tracking-tighter uppercase cursor-default">
         {t.contact.title}
       </h2>
-      <p className="text-slate-400 mb-12 max-w-lg mx-auto italic cursor-default">
+      <p className="text-navy-muted mb-12 max-w-lg mx-auto italic cursor-default">
         {t.contact.subtitle}
       </p>
 
@@ -43,9 +43,9 @@ export default function ContactSection() {
               href={link.href}
               target="_blank"
               rel="noreferrer"
-              className={`cursor-pointer group p-6 rounded-full bg-slate-900 border border-slate-800 hover:-translate-y-2 transition-all duration-500 ${link.hoverShadow}`}
+              className={`cursor-pointer group p-6 rounded-full bg-sand border border-sand-dark hover:-translate-y-2 transition-all duration-500 ${link.hoverShadow}`}
             >
-              <div className={`text-slate-400 transition-colors duration-300 ${link.hoverText}`}>
+              <div className={`text-navy-muted transition-colors duration-300 ${link.hoverText}`}>
                 <Icon />
               </div>
             </a>
@@ -54,7 +54,7 @@ export default function ContactSection() {
       </div>
 
       <div className="mt-20 flex justify-center items-center">
-        <div className="inline-flex items-center gap-3 text-slate-400 hover:text-blue-400 transition-all duration-300 group bg-slate-900/50 px-6 py-3 rounded-2xl border border-slate-800 hover:border-blue-500/30">
+        <div className="inline-flex items-center gap-3 text-navy-muted hover:text-bronze transition-all duration-300 group bg-sand/60 px-6 py-3 rounded-2xl border border-sand-dark hover:border-bronze/30">
           <Icons.Mail />
           <span className="font-bold text-lg md:text-xl italic tracking-tight transition-all duration-300">
             {EMAIL}
@@ -62,7 +62,7 @@ export default function ContactSection() {
           <div
             onClick={copyToClipboard}
             className={`cursor-pointer p-2 rounded-lg transition-all duration-300 ${
-              copied ? "text-emerald-400" : "text-slate-500 hover:text-white hover:bg-slate-800"
+              copied ? "text-emerald-600" : "text-navy-muted hover:text-navy hover:bg-sand-dark"
             }`}
           >
             {copied ? <Icons.Check /> : <Icons.Copy />}

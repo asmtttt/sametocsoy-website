@@ -16,6 +16,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Samet Öçsoy | Software Engineer",
   description: "AI & Full Stack Developer Portfolio",
+  icons: {
+    icon: [
+      { url: "/assets/logos/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/assets/logos/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/logos/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/assets/logos/favicon-64x64.png", sizes: "64x64", type: "image/png" },
+      { url: "/assets/logos/favicon-128x128.png", sizes: "128x128", type: "image/png" },
+      { url: "/assets/logos/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/assets/logos/favicon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/assets/logos/favicon-32x32.png",
+    apple: "/assets/logos/favicon-180x180.png",
+  },
 };
 
 export default function RootLayout({

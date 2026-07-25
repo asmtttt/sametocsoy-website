@@ -14,7 +14,7 @@ function PortfolioContent() {
   const [activeTab, setActiveTab] = useState(initialTab);
 
   return (
-    <div className="min-h-screen bg-[#030712] text-slate-200 selection:bg-blue-500/30 selection:text-blue-200 font-sans tracking-tight">
+    <div className="min-h-screen bg-sand-light text-brown selection:bg-tangerine/25 selection:text-brown font-sans tracking-tight">
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       <main className="max-w-5xl mx-auto px-6 pt-32 pb-20">

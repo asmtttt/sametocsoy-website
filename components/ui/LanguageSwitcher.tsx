@@ -41,12 +41,12 @@ export default function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="cursor-pointer flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900/50 hover:border-slate-600 transition-all duration-300 text-sm font-medium text-slate-300"
+        className="cursor-pointer flex items-center gap-2 px-3 py-1.5 rounded-lg border border-sand-dark bg-sand/60 hover:border-bronze/50 transition-all duration-300 text-sm font-medium text-brown"
       >
         <Flag code={current.flagCode} />
         <span className="hidden sm:inline">{current.label}</span>
         <svg
-          className={`w-3 h-3 text-slate-500 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`w-3 h-3 text-navy-muted transition-transform duration-200 ${open ? "rotate-180" : ""}`}
           fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -54,15 +54,15 @@ export default function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-36 rounded-xl border border-slate-800 bg-[#030712]/95 backdrop-blur-lg shadow-2xl overflow-hidden z-50">
+        <div className="absolute right-0 mt-2 w-36 rounded-xl border border-sand-dark bg-sand-light/95 backdrop-blur-lg shadow-2xl overflow-hidden z-50">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => { setLocale(lang.code); setOpen(false); }}
               className={`cursor-pointer w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors duration-200 ${
                 locale === lang.code
-                  ? "text-blue-400 bg-blue-500/10"
-                  : "text-slate-300 hover:bg-slate-800/60"
+                  ? "text-bronze bg-bronze/10"
+                  : "text-brown hover:bg-sand-dark/60"
               }`}
             >
               <Flag code={lang.flagCode} />

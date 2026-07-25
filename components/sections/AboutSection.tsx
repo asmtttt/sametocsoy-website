@@ -15,34 +15,34 @@ export default function AboutSection({ onViewDetails }: AboutSectionProps) {
     <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <div className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-6 tracking-widest uppercase cursor-default">
+          <div className="inline-block px-3 py-1 rounded-full bg-bronze/10 border border-bronze/20 text-bronze text-xs font-bold mb-6 tracking-widest uppercase cursor-default">
             {h.badge}
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tight text-white leading-[1.1] cursor-default">
-            {h.headlineStart} <span className="text-blue-500">{h.headlineAccent}</span>{" "}
+          <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tight text-navy leading-[1.1] cursor-default">
+            {h.headlineStart} <span className="text-bronze">{h.headlineAccent}</span>{" "}
             {h.headlineEnd}
           </h1>
-          <p className="text-lg text-slate-400 leading-relaxed mb-6 cursor-default">
+          <p className="text-lg text-navy-muted leading-relaxed mb-6 cursor-default">
             {h.descPrefix}{" "}
-            <span className="text-slate-200 font-semibold">{h.descAI}</span>{" "}
+            <span className="text-navy font-semibold">{h.descAI}</span>{" "}
             {h.descMid}{" "}
-            <span className="text-blue-400 font-semibold italic">{h.descMap}</span>{" "}
+            <span className="text-bronze font-semibold italic">{h.descMap}</span>{" "}
             {h.descSuffix}
           </p>
-          <div className="flex items-center gap-4 text-slate-500 italic border-l-2 border-slate-800 pl-4 mb-8 cursor-default font-medium">
+          <div className="flex items-center gap-4 text-navy-muted italic border-l-2 border-sand-dark pl-4 mb-8 cursor-default font-medium">
             &quot;{h.quote}&quot;
           </div>
           <div className="flex gap-4">
             <button
               onClick={onViewDetails}
-              className="cursor-pointer bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-bold transition-all duration-300 shadow-lg shadow-blue-600/20 active:scale-95"
+              className="cursor-pointer bg-navy hover:bg-navy/90 text-sand-light px-8 py-3 rounded-full font-bold transition-all duration-300 shadow-lg shadow-navy/20 active:scale-95"
             >
               {h.cta}
             </button>
             <a
-              href="/resume.pdf"
+              href="/resume-2026-last-version.pdf"
               download="Samet_Ocsoy_CV.pdf"
-              className="cursor-pointer flex items-center gap-2 border border-slate-700 hover:border-slate-500 px-8 py-3 rounded-full font-bold transition-all duration-300 active:scale-95 text-slate-200"
+              className="cursor-pointer flex items-center gap-2 border border-bronze/40 hover:border-bronze px-8 py-3 rounded-full font-bold transition-all duration-300 active:scale-95 text-brown"
             >
               <Icons.Download /> {h.downloadCV}
             </a>
@@ -50,9 +50,9 @@ export default function AboutSection({ onViewDetails }: AboutSectionProps) {
         </div>
 
         <div className="relative flex justify-center">
-          <div className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full" />
-          <div className="relative w-72 h-72 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/50 shadow-2xl flex items-center justify-center text-8xl transition-all duration-700 ease-in-out transform hover:scale-105 cursor-pointer">
-            🚀
+          <div className="absolute inset-0 bg-bronze/10 blur-[100px] rounded-full" />
+          <div className="relative w-72 h-72 rounded-3xl overflow-hidden border border-sand-dark bg-sand/60 shadow-2xl flex items-center justify-center text-bronze transition-all duration-700 ease-in-out transform hover:scale-105 hover:text-navy cursor-pointer">
+            <Icons.Rocket size={140} />
           </div>
         </div>
       </div>
