@@ -56,6 +56,24 @@
           "Tiered SaaS subscription: Starter, Professional, and Multi-branch enterprise plans"
         ]
       },
+      "meister-basketball": {
+        "title": "Meister Basketball Academy — Online Training Platform",
+        "subtitle": "Memberships, Protected Video Lessons & Admin Panel",
+        "shortDescription": "An end-to-end training platform that sells basketball coaches' video lessons through membership plans — with payments, a protected video player, a member area and a role-based admin panel.",
+        "description": "Meister Basketball Academy is a training platform I built for the community of a basketball YouTube channel. Athletes pick the membership plan that fits their level, pay through Shopier, watch protected video lessons and track their progress. Coaches and admins manage lessons, plans, members and orders from an admin panel secured with two-step verification. The platform runs live on Next.js, Supabase (Row Level Security) and Vercel, with a mobile-first design and light/dark themes.",
+        "details": [
+          "Marketing site with hero, coaches, gallery, testimonials, plans, a free sample lesson and FAQ, cached with ISR",
+          "Tiered membership plans with a 1 / 3 / 12-month selector; coupons plus renewal and upgrade pricing",
+          "Shopier payment integration: provider-agnostic payment interface, idempotent callbacks and automatic membership entitlements",
+          "Provider-agnostic video layer supporting Bunny, Vimeo and YouTube — signed expiring URLs, viewer watermark and a 2-device limit",
+          "Member area: continue watching, library with category and level filters, module/lesson progress bars, locked lessons with an upgrade flow",
+          "Role-based admin panel (admin / editor): drag-and-drop lesson and module ordering, coaches, plans, coupons, FAQ and legal pages, order refunds and an audit log",
+          "TOTP two-step verification for admin access, with authorization enforced in the database through Row Level Security",
+          "Email/password and Google sign-in; guardian details and consent for members under 18 (KVKK-compliant sign-up flow)",
+          "Turkish email templates with Resend, renewal reminders via Vercel Cron, consent-gated GA4 / Meta Pixel and Sentry error tracking",
+          "Verified with Vitest, PGlite-based RLS tests and Playwright end-to-end tests, scoring 96+ on Lighthouse accessibility and SEO"
+        ]
+      },
       "avatar-chatbot": {
         "title": "Industry-Based Avatar Chatbot",
         "subtitle": "Voice & Text AI Assistant System",

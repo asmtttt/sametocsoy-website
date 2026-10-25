@@ -56,6 +56,24 @@
           "Kademeli SaaS aboneliği: Başlangıç, Profesyonel ve Çoklu Şube kurumsal paketleri"
         ]
       },
+      "meister-basketball": {
+        "title": "Meister Basketball Academy — Online Eğitim Platformu",
+        "subtitle": "Üyelik, Korumalı Video Dersler & Yönetim Paneli",
+        "shortDescription": "Basketbol antrenörlerinin video derslerini üyelik paketleriyle sunan; ödeme, korumalı video oynatıcı, üye paneli ve rol tabanlı yönetim paneli içeren uçtan uca bir eğitim platformu.",
+        "description": "Meister Basketball Academy, bir YouTube basketbol kanalının topluluğu için geliştirdiğim eğitim platformudur. Sporcular seviyelerine uygun üyelik paketini seçip Shopier ile ödeme yapar, korumalı video derslere erişir ve ilerlemelerini takip eder. Antrenör ve yöneticiler ise iki adımlı doğrulamalı yönetim panelinden dersleri, paketleri, üyeleri ve siparişleri yönetir. Platform; Next.js, Supabase (Row Level Security) ve Vercel üzerinde, mobil öncelikli ve açık/koyu tema destekli olarak yayındadır.",
+        "details": [
+          "Hero, antrenör tanıtımı, galeri, yorumlar, paketler, ücretsiz örnek ders ve SSS bölümlerinden oluşan, ISR ile önbelleklenen tanıtım sitesi",
+          "1 / 3 / 12 aylık süre seçicili kademeli üyelik paketleri; kupon, yenileme ve paket yükseltme fiyatlandırması",
+          "Shopier ödeme entegrasyonu: sağlayıcıdan bağımsız ödeme arayüzü, tekrar işlemeye karşı korumalı callback ve otomatik üyelik yetkilendirmesi",
+          "Bunny, Vimeo ve YouTube destekleyen sağlayıcıdan bağımsız video altyapısı; imzalı süreli URL, izleyici filigranı ve 2 cihaz sınırı",
+          "Üye paneli: izlemeye devam et, kategori ve seviye filtreli kütüphane, modül/ders ilerleme çubukları, paket dışı derslerde kilit ve yükseltme akışı",
+          "Rol tabanlı yönetim paneli (yönetici / editör): sürükle-bırak ders ve modül düzenleme, antrenör, paket, kupon, SSS ve yasal sayfa yönetimi, sipariş iadesi ve denetim kaydı",
+          "Yönetim erişimi için TOTP iki adımlı doğrulama; veritabanı seviyesinde Row Level Security ile uygulanan yetkilendirme",
+          "E-posta/şifre ve Google ile giriş; 18 yaş altı üyeler için veli bilgisi ve onayı (KVKK uyumlu kayıt akışı)",
+          "Resend ile Türkçe e-posta şablonları, Vercel Cron ile yenileme hatırlatmaları, çerez onaylı GA4 / Meta Pixel, Sentry hata izleme",
+          "Vitest, PGlite tabanlı RLS testleri ve Playwright uçtan uca testleriyle doğrulanan, Lighthouse'ta erişilebilirlik ve SEO'da 96+ puanlı yapı"
+        ]
+      },
       "avatar-chatbot": {
         "title": "Sektör Tabanlı Avatar Chatbot",
         "subtitle": "Sesli & Yazılı AI Asistan Sistemi",

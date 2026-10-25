@@ -7,7 +7,6 @@ import { ArrowLeft, Download, ExternalLink, ListChecks, Loader2 } from "lucide-r
 import { PageShell } from "@/components/page-shell"
 import ProjectVideo from "@/components/projects/ProjectVideo"
 import ProjectScreenshots from "@/components/projects/ProjectScreenshots"
-import LaptopCarousel from "@/components/projects/LaptopCarousel"
 import { Reveal } from "@/components/reveal"
 import { SectionTitle } from "@/components/section-title"
 import { SiteHeader } from "@/components/site-header"
@@ -132,12 +131,7 @@ export default function ProjectDetailContent({ project }: { project: Project }) 
           </Card>
         </Reveal>
 
-        {project.screenshots &&
-          (project.slug === "qrder" ? (
-            <LaptopCarousel images={project.screenshots.laptop} />
-          ) : (
-            <ProjectScreenshots screenshots={project.screenshots} lang={locale} />
-          ))}
+        {project.screenshots && <ProjectScreenshots screenshots={project.screenshots} lang={locale} />}
         {project.videoUrl && <ProjectVideo url={project.videoUrl} />}
 
         <section className="break-inside-avoid">
